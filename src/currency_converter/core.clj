@@ -3,8 +3,8 @@
   (:gen-class))
 
 (def options
-  [["-f" "--from=currency" "From Currency" :default "BRL"]
-   ["-t" "--to=currency" "To Currency" :default "USD"]])
+  [["-f" "--from currency base" "From Currency" :default "BRL"]
+   ["-t" "--to currency base" "To Currency" :default "USD"]])
 
 (defn -main
   "Calling static main function"
