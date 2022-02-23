@@ -1,13 +1,12 @@
 (ns currency-converter.core
+  (:require [clojure.tools.cli :refer [parse-opts]])
   (:gen-class))
 
-(defn values-in [argument]
-  (cond
-    (.startsWith argument "--from=") {:from (subs argument 7)}
-    (.startsWith argument "--to=") {:to (subs argument 5)}
-    :else {}))
+(def options
+  [["-f" "--from=currency" "From Currency" :default "BRL"]
+   ["-t" "--to=currency" "To Currency" :default "USD"]])
 
 (defn -main
   "Calling static main function"
   [& args]
-  (println "Arguments are: " (map values-in args)))
+  (println "Arguments are: " (:options (parse-opts args options))))
