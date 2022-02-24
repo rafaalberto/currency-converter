@@ -5,7 +5,8 @@
             :url  "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.3"]
                  [org.clojure/tools.cli "1.0.206"]
-                 [clj-http "3.12.3"]]
+                 [clj-http "3.12.3"]
+                 [cheshire "5.10.2"]]
   :main ^:skip-aot currency-converter.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
